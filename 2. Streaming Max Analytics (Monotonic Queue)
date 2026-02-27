@@ -1,0 +1,23 @@
+from collections import deque
+
+class StreamingMax:
+    def __init__(self, k):
+        self.k = k
+        self.deque = deque()
+        self.result = []
+
+    def process(self, nums):
+        for i, num in enumerate(nums):
+
+            while self.deque and self.deque[0] <= i - self.k:
+                self.deque.popleft()
+
+            while self.deque and nums[self.deque[-1]] < num:
+                self.deque.pop()
+
+            self.deque.append(i)
+
+            if i >= self.k - 1:
+                self.result.append(nums[self.deque[0]])
+
+        return self.result
