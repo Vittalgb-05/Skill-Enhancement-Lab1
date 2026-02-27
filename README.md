@@ -1,5 +1,6 @@
-🚀 Production & Optimization Sprint
-Overview
+# 🚀 Production & Optimization Sprint
+
+## Overview
 
 This repository contains solutions to five high-performance algorithmic problems inspired by real-world technical assessments conducted by global technology companies.
 
@@ -7,112 +8,136 @@ The objective of this sprint is not only to solve computational problems but als
 
 Each problem demonstrates practical applications of advanced data structures and algorithms used in production systems such as search engines, analytics platforms, network monitoring tools, and resource optimization engines.
 
-📌 Problems Implemented
-1. Global Autocomplete System (Trie)
+---
 
-Concepts Used: Trie Data Structure, Frequency Ranking
+## 📌 Problems Implemented
 
+### 1️⃣ Global Autocomplete System (Trie)
+
+**Concepts Used**
+
+* Trie Data Structure
+* Frequency Ranking
+
+**Description**
 A scalable autocomplete engine capable of storing large dictionaries (up to millions of strings).
 Given a prefix, the system returns the top 5 most frequent suggestions.
 
-Complexity
+**Complexity**
 
-Insert: O(L)
+* Insert: `O(L)`
+* Prefix Search: `O(L)`
+  *(where L is the length of the prefix)*
 
-Prefix Search: O(L)
-(where L = length of prefix)
+**Real-World Use Cases**
 
-Real-World Use Case
+* Search engines
+* IDE code completion
+* E-commerce search suggestions
 
-Search engines
+---
 
-IDE code completion
+### 2️⃣ Streaming Max Analytics (Monotonic Queue)
 
-E-commerce search suggestions
+**Concepts Used**
 
-2. Streaming Max Analytics (Monotonic Queue)
+* Deque
+* Sliding Window
+* Monotonic Queue
 
-Concepts Used: Deque, Sliding Window, Monotonic Queue
-
+**Description**
 Processes continuous server latency data and computes maximum latency within a moving window.
 
-Complexity
+**Complexity**
 
-Amortized processing time per element: O(1)
+* Amortized processing time per element: `O(1)`
 
-Real-World Use Case
+**Real-World Use Cases**
 
-Real-time monitoring dashboards
+* Real-time monitoring dashboards
+* Performance analytics systems
+* Streaming data pipelines
 
-Performance analytics systems
+---
 
-Streaming data pipelines
+### 3️⃣ Dynamic Network Vulnerability Detection (Tarjan’s Algorithm)
 
-3. Dynamic Network Vulnerability Detection (Tarjan’s Algorithm)
+**Concepts Used**
 
-Concepts Used: Graph Theory, DFS, Low-Link Values
+* Graph Theory
+* Depth First Search (DFS)
+* Low-Link Values
 
+**Description**
 Identifies all critical links (bridges) in a communication network whose removal disconnects the system.
 
-Complexity
+**Complexity**
 
-O(V + E) using single DFS traversal
+* `O(V + E)` using a single DFS traversal
 
-Real-World Use Case
+**Real-World Use Cases**
 
-Network reliability analysis
+* Network reliability analysis
+* Infrastructure security auditing
+* Distributed system monitoring
 
-Infrastructure security auditing
+---
 
-Distributed system monitoring
+### 4️⃣ Range Performance Monitor (Segment Tree)
 
-4. Range Performance Monitor (Segment Tree)
+**Concepts Used**
 
-Concepts Used: Segment Tree, Range Queries
+* Segment Tree
+* Range Queries
 
+**Description**
 Supports efficient stock price updates and maximum value queries over time ranges.
 
-Operations
+**Operations**
 
-update(index, value)
+* `update(index, value)`
+* `queryMax(L, R)`
 
-queryMax(L, R)
+**Complexity**
 
-Complexity
+* Update: `O(log N)`
+* Query: `O(log N)`
 
-Update: O(log N)
+**Real-World Use Cases**
 
-Query: O(log N)
+* Financial analytics
+* Time-series databases
+* Trading platforms
 
-Real-World Use Case
+---
 
-Financial analytics
+### 5️⃣ Optimal Resource Allocation (Bitmask Dynamic Programming)
 
-Time-series databases
+**Concepts Used**
 
-Trading platforms
+* Bitmasking
+* Dynamic Programming
+* State Compression
 
-5. Optimal Resource Allocation (Bitmask Dynamic Programming)
-
-Concepts Used: Bitmasking, Dynamic Programming, State Compression
-
+**Description**
 Assigns workers to tasks such that total cost is minimized.
 
-Optimization
+**Optimization**
 
-Improved from brute force O(N!)
+* Improved from brute force: `O(N!)`
+* Achieved complexity: `O(2^N × N²)`
 
-Achieved complexity: O(2^N × N²)
+**Real-World Use Cases**
 
-Real-World Use Case
+* Job scheduling
+* Resource planning
+* Task optimization systems
 
-Job scheduling
+---
 
-Resource planning
+## 🗂 Repository Structure
 
-Task optimization systems
-
-🗂 Repository Structure
+```
 Production-Optimization-Sprint/
 │
 ├── 1_Global_Autocomplete_Trie/
@@ -121,22 +146,22 @@ Production-Optimization-Sprint/
 ├── 4_Range_Performance_SegmentTree/
 ├── 5_Optimal_Resource_Allocation/
 └── README.md
-⚙️ Technologies Used
+```
 
-Python 3
+---
 
-Advanced Data Structures
+## ⚙️ Technologies Used
 
-Graph Algorithms
+* Python 3
+* Advanced Data Structures
+* Graph Algorithms
+* Dynamic Programming Techniques
 
-Dynamic Programming Techniques
+---
 
-🎯 Learning Outcomes
+## 🎯 Learning Outcomes
 
-Designing scalable algorithmic systems
-
-Performance optimization under constraints
-
-Efficient memory and time complexity handling
-
-Applying theoretical DSA concepts to production scenarios
+* Designing scalable algorithmic systems
+* Performance optimization under constraints
+* Efficient memory and time complexity handling
+* Applying theoretical DSA concepts to production scenarios
